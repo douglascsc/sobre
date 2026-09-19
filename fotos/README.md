@@ -13,7 +13,7 @@ Todas as fotos recebem automaticamente um tratamento em preto e branco (ficam co
 | `como-ensino-sala.jpg` | Seção "Como gosto de ensinar", entre "Pensamento crítico" e "Ponto de partida" | Interação real com estudantes, espontânea, formato largo ~16:9 |
 | `timeline-2006.jpg` | Card de 2006 (O início) na linha do tempo | Foto de época do curso/Fundação Liberato/MOSTRATEC, se existir |
 | `timeline-2008.jpg` | Card de 2008–2014 na linha do tempo | Indústria / Tecplast |
-| `timeline-voluntariado.jpg` | Card de 2014–2018 na linha do tempo | Voluntariado (Terra Viva) |
+| `timeline-voluntariado.png` | Card de 2014–2018 na linha do tempo | Voluntariado (Terra Viva) |
 | `timeline-2018.jpg` | Card de 2018–2021 na linha do tempo | Ticket Log / Edenred |
 | `timeline-2024.jpg` | Card de 2024 na linha do tempo | Mestrado / formatura |
 | `timeline-2026.jpg` | Card de 2026 (IFSUL) na linha do tempo | Douglas no campus, sala ou laboratório do IFSUL, hoje |
