@@ -12,7 +12,6 @@ Todas as fotos recebem automaticamente um tratamento em preto e branco (ficam co
 | `quem-sou-hoje.jpg` | Seção "Quem sou hoje", ao lado da lista | Foto atual, em contexto profissional (não still de estúdio), formato ~4:5 |
 | `como-ensino-sala.jpg` | Seção "Como gosto de ensinar", entre "Pensamento crítico" e "Ponto de partida" | Interação real com estudantes, espontânea, formato largo ~16:9 |
 | `timeline-2006.jpg` | Card de 2006 (O início) na linha do tempo | Foto de época do curso/Fundação Liberato/MOSTRATEC, se existir |
-| `timeline-2006-2008.jpg` | Card de 2006–2008 (Canoas Shopping Center) na linha do tempo | Foto de época do primeiro emprego, se existir |
 | `timeline-2008.jpg` | Card de 2008–2014 na linha do tempo | Indústria / Tecplast |
 | `timeline-voluntariado.jpg` | Card de 2014–2018 na linha do tempo | Voluntariado (Terra Viva) |
 | `timeline-2018.jpg` | Card de 2018–2021 na linha do tempo | Ticket Log / Edenred |
