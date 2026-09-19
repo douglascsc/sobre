@@ -469,6 +469,10 @@
   .thumb-caption{ margin:-8px 0 14px; font-size:12.5px; color: var(--text-faint); font-weight:600; }
   @media (min-width:560px){ .thumb-caption{ float:right; clear:right; width:240px; margin:-10px 20px 14px 0; text-align:right; } }
 
+  .thumb-pair{ display:flex; flex-direction:column; gap:8px; width:160px; margin:0 auto 16px; }
+  .thumb-pair .ph{ aspect-ratio:4/3; border-radius:10px; box-shadow: var(--shadow); border:1px solid var(--border); }
+  @media (min-width:560px){ .thumb-pair{ float:right; width:150px; margin:0 0 14px 20px; } }
+
   /* ---------- Quem sou hoje: foto ao lado da lista ---------- */
   .qsh-flex{ display:flex; flex-direction:column; gap:28px; }
   .qsh-photo{
@@ -795,8 +799,10 @@
           <div class="t-year">2014–2018</div>
           <h3 class="t-title">Gestão, processos e desenvolvimento humano</h3>
           <div class="t-card">
-            <figure class="ph thumb"><img src="fotos/timeline-voluntariado.png" alt="Foto do voluntariado" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
-            <figure class="ph thumb"><img src="fotos/timeline-voluntariado-2.png" alt="Foto do voluntariado" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
+            <div class="thumb-pair">
+              <figure class="ph"><img src="fotos/timeline-voluntariado.png" alt="Foto do voluntariado" loading="lazy" onerror="this.parentElement.remove()"></figure>
+              <figure class="ph"><img src="fotos/timeline-voluntariado-2.png" alt="Foto do voluntariado" loading="lazy" onerror="this.parentElement.remove()"></figure>
+            </div>
             <div class="t-tags"><span class="tag gestao">Gestão</span><span class="tag tech">Tecnologia</span><span class="tag educ">Educação</span></div>
             <div class="exp-node solo">
               <h4 class="exp-company">Klabin</h4>
