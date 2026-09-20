@@ -12,11 +12,11 @@ Todas as fotos recebem automaticamente um tratamento em preto e branco (ficam co
 | `quem-sou-hoje.jpg` | Seção "Quem sou hoje", ao lado da lista | Foto atual, em contexto profissional (não still de estúdio), formato ~4:5 |
 | `como-ensino-sala.jpg` | Seção "Como gosto de ensinar", entre "Pensamento crítico" e "Ponto de partida" | Interação real com estudantes, espontânea, formato largo ~16:9 |
 | `timeline-2006.jpg` | Card de 2006 (O início) na linha do tempo | Foto de época do curso/Fundação Liberato/MOSTRATEC, se existir |
-| `timeline-2008.jpg` | Card de 2008–2014 na linha do tempo | Indústria / Tecplast |
 | `timeline-voluntariado.png` | Card de 2014–2018 na linha do tempo | Voluntariado (Terra Viva) |
 | `timeline-voluntariado-2.png` | Card de 2014–2018 na linha do tempo (2ª foto) | Voluntariado (Terra Viva) |
 | `timeline-2018.jpg` | Card de 2018–2021 na linha do tempo | Ticket Log / Edenred |
-| `timeline-2024.jpg` | Card de 2024 na linha do tempo | Mestrado / formatura |
+| `timeline-pandemia-1.jpg` | Card de 2018–2021, bloco "2020 - Pandemia / Operação remota" | Operação remota durante a pandemia |
+| `timeline-pandemia-2.jpg` | Card de 2018–2021, bloco "2020 - Pandemia / Operação remota" (2ª foto) | Operação remota durante a pandemia |
 | `timeline-2026.jpg` | Card de 2026 (IFSUL) na linha do tempo | Douglas no campus, sala ou laboratório do IFSUL, hoje |
 | `reconhecimento-ninja-1.jpg` | Card "Ninja Edenred" (1ª foto) | Foto ou print do reconhecimento |
 | `reconhecimento-ninja-2.jpg` | Card "Ninja Edenred" (2ª foto) | Segunda foto ou print do reconhecimento |
