@@ -350,7 +350,13 @@
   }
 
   /* ---------- Se voce e meu aluno ---------- */
-  .aluno-block{ max-width: 600px; }
+  #para-meu-aluno .container{ position:relative; }
+  #para-meu-aluno .container::before{
+    content:"\201C"; position:absolute; top:12px; right:24px; font-family:var(--serif);
+    font-size:200px; line-height:1; color:var(--border); z-index:0; user-select:none; pointer-events:none;
+  }
+  @media (max-width:960px){ #para-meu-aluno .container::before{ display:none; } }
+  .aluno-block{ max-width: 600px; position:relative; z-index:1; }
   .aluno-block h2{ font-size: 24px; margin-bottom: 18px; }
   .aluno-block p{ font-size: 18px; line-height:1.75; color: var(--text); margin:0; }
   .aluno-block p + p{ margin-top:14px; }
@@ -630,15 +636,15 @@
       </div>
       <div class="identity-strip reveal">
         <div class="identity-item">
-          <span class="label tech">Tecnologia na prática</span>
+          <span class="label">Tecnologia na prática</span>
           <p>Não ensino uma ferramenta pela ferramenta. Procuro entender com os estudantes que problemas ela resolve, que possibilidades cria e que impactos produz. A tecnologia faz parte do trabalho e da sociedade, então aprender a usá-la também é aprender a questionar e agir sobre a realidade.</p>
         </div>
         <div class="identity-item">
-          <span class="label gestao">Mundo real</span>
+          <span class="label">Mundo real</span>
           <p>Gosto de aprender e ensinar fazendo, relacionando os conteúdos com situações, problemas e desafios reais. Pra mim, mundo real não é só mercado de trabalho: é também compreender as pessoas, os problemas, as escolhas e os impactos que existem por trás de cada tecnologia.</p>
         </div>
         <div class="identity-item">
-          <span class="label educ">Aprender fazendo</span>
+          <span class="label">Aprender fazendo</span>
           <p>Projetos, exercícios e situações práticas, muitas vezes resolvidos em grupo, têm mais espaço nas minhas aulas do que listas de conceitos para decorar.</p>
         </div>
         <div class="identity-item">
