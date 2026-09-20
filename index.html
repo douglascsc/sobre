@@ -393,6 +393,18 @@
   .rec-card .meta{ font-size:13px; color: var(--text-faint); margin-bottom:10px; }
   .rec-card p{ font-size:14.5px; color: var(--text-muted); margin:0; }
 
+  /* ---------- Marcos da trajetória: card em acordeão ---------- */
+  .rec-card > summary{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    cursor:pointer; list-style:none; font-size:16px; font-family:var(--sans); font-weight:700;
+  }
+  .rec-card > summary::-webkit-details-marker{ display:none; }
+  .rec-card > summary::after{
+    content:"+"; flex-shrink:0; font-weight:400; font-size:20px; line-height:1; color: var(--text-muted);
+  }
+  .rec-card[open] > summary::after{ content:"–"; }
+  .rec-card[open] > summary{ margin-bottom:14px; }
+
   /* ---------- Proof chain ---------- */
   .chain{ display:flex; flex-direction:column; }
   .chain-item{
@@ -1096,11 +1108,11 @@
           </ul>
         </div>
         <!-- Oculto por enquanto: remover este comentário para publicar
-        <div class="rec-card" style="grid-column:1/-1;">
+        <details class="rec-card" style="grid-column:1/-1;">
+          <summary>Aprovações em concursos públicos</summary>
           <div class="icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/></svg>
           </div>
-          <h3>Aprovações em concursos públicos</h3>
           <p class="meta">Persistência e preparação ao longo dos anos</p>
           <p>Fui nomeado em mais de 5 concursos públicos, além de outras aprovações.</p>
           <ul class="t-list">
@@ -1111,7 +1123,7 @@
             <li>Prefeitura de Sapucaia do Sul (2027).</li>
             <li>IFRS (2027).</li>
           </ul>
-        </div>
+        </details>
         -->
       </div>
     </div>
