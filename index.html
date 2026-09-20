@@ -282,12 +282,15 @@
   .t-more{ margin-top:14px; border-top:1px dashed var(--border); padding-top:10px; }
   .t-more summary{
     cursor:pointer; font-size:13px; font-weight:600; color: var(--text-muted);
-    list-style:none; display:flex; align-items:center; gap:6px;
+    list-style:none; display:flex; align-items:center; gap:7px;
   }
   .t-more summary::-webkit-details-marker{ display:none; }
-  .t-more summary::before{ content:"+"; font-weight:700; color: var(--text-faint); }
-  .t-more[open] summary::before{ content:"–"; }
+  .t-more summary::before{
+    content:"▸"; font-size:11px; color: var(--text-faint); display:inline-block; transition:transform .2s ease;
+  }
+  .t-more[open] summary::before{ transform:rotate(90deg); }
   .t-more[open] summary{ margin-bottom:10px; }
+  @media (prefers-reduced-motion: reduce){ .t-more summary::before{ transition:none; } }
   .t-more .t-block:first-of-type{ margin-top:0; }
 
   /* ---------- Timeline: experience node (mini linha do tempo dentro do card) ---------- */
