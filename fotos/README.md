@@ -16,6 +16,7 @@ Todas as fotos recebem automaticamente um tratamento em preto e branco (ficam co
 | `timeline-pandemia-2.jpg` | Card de 2018–2021, bloco "2020 - Pandemia / Operação remota" (2ª foto) | Operação remota durante a pandemia |
 | `timeline-tiradentes-1.png` | Card de 2024–2026 na linha do tempo | Colégio Sinodal Tiradentes |
 | `timeline-tiradentes-2.png` | Card de 2024–2026 na linha do tempo (2ª foto) | Colégio Sinodal Tiradentes |
+| `timeline-tiradentes-3.png` | Card de 2024–2026 na linha do tempo (3ª foto) | Colégio Sinodal Tiradentes |
 | `timeline-2026.jpg` | Card de 2026 (IFSUL) na linha do tempo | Douglas no campus, sala ou laboratório do IFSUL, hoje |
 | `reconhecimento-ninja-1.jpg` | Card "Ninja Edenred" (1ª foto) | Foto ou print do reconhecimento |
 | `reconhecimento-ninja-2.jpg` | Card "Ninja Edenred" (2ª foto) | Segunda foto ou print do reconhecimento |
