@@ -218,6 +218,20 @@
     .identity-item{ grid-template-columns: 1fr; gap:4px; }
   }
 
+  /* ---------- Como gosto de ensinar: itens em acordeão ---------- */
+  #como-ensino .identity-item{ display:block; padding:0; }
+  #como-ensino .identity-item summary{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    padding:16px 0; cursor:pointer; list-style:none; font-weight:700; font-size:14px;
+  }
+  #como-ensino .identity-item summary::-webkit-details-marker{ display:none; }
+  #como-ensino .identity-item summary::after{
+    content:"+"; flex-shrink:0; font-weight:400; font-size:20px; line-height:1;
+    color: var(--text-muted);
+  }
+  #como-ensino .identity-item[open] summary::after{ content:"–"; }
+  #como-ensino .identity-item p{ margin:0 0 16px; }
+
   /* ---------- Timeline ---------- */
   .timeline{ position:relative; margin-top: 20px; }
   .timeline::before{
@@ -612,37 +626,37 @@
         <p>Ensinar na rede pública é acreditar que a educação pode abrir portas. Pra mim, aprender uma profissão e aprender a ser cidadão caminham juntos.</p>
       </div>
       <div class="identity-strip reveal">
-        <div class="identity-item">
-          <span class="label">Tecnologia na prática</span>
+        <details class="identity-item">
+          <summary>Tecnologia na prática</summary>
           <p>Não ensino uma ferramenta pela ferramenta. Procuro entender com os estudantes que problemas ela resolve, que possibilidades cria e que impactos produz. A tecnologia faz parte do trabalho e da sociedade, então aprender a usá-la também é aprender a questionar e agir sobre a realidade.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label">Mundo real</span>
+        </details>
+        <details class="identity-item">
+          <summary>Mundo real</summary>
           <p>Gosto de aprender e ensinar fazendo, relacionando os conteúdos com situações, problemas e desafios reais. Pra mim, mundo real não é só mercado de trabalho: é também compreender as pessoas, os problemas, as escolhas e os impactos que existem por trás de cada tecnologia.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label">Aprender fazendo</span>
+        </details>
+        <details class="identity-item">
+          <summary>Aprender fazendo</summary>
           <p>Projetos, exercícios e situações práticas, muitas vezes resolvidos em grupo, têm mais espaço nas minhas aulas do que listas de conceitos para decorar.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label">Pensamento crítico</span>
+        </details>
+        <details class="identity-item">
+          <summary>Pensamento crítico</summary>
           <p>Mais importante do que saber operar uma ferramenta é entender por que ela existe e como se conecta com a realidade de quem está aprendendo.</p>
-        </div>
+        </details>
         <figure class="ph como-ensino-photo reveal">
           <img src="fotos/como-ensino-sala.jpg" alt="Douglas em sala de aula, interagindo com estudantes" loading="lazy" onerror="this.closest('.como-ensino-photo').remove()">
         </figure>
-        <div class="identity-item">
-          <span class="label">Ponto de partida</span>
+        <details class="identity-item">
+          <summary>Ponto de partida</summary>
           <p>Parto do que cada estudante já traz, de vida, de trabalho, de escola, em vez de começar do zero. Pra isso, preciso ouvir antes de ensinar.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label">Curiosidade</span>
+        </details>
+        <details class="identity-item">
+          <summary>Curiosidade</summary>
           <p>Tecnologia muda o tempo todo. Busco fazer com que os estudantes aprendam a aprender, também uns com os outros.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label">Protagonismo e autonomia</span>
+        </details>
+        <details class="identity-item">
+          <summary>Protagonismo e autonomia</summary>
           <p>Gosto de dar espaço para o estudante investigar, testar e decidir por conta própria, em vez de só repetir o que eu mostrei. Errar faz parte desse processo.</p>
-        </div>
+        </details>
       </div>
     </div>
   </section>
