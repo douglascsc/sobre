@@ -202,35 +202,28 @@
   .reveal.in{ opacity:1; transform:none; }
   @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1; transform:none; transition:none; } }
 
-  /* ---------- Identity strip ("Quem sou hoje") ---------- */
+  /* ---------- Identity strip ("Quem sou hoje", "Como gosto de ensinar") ---------- */
   .identity-strip{ display:flex; flex-direction:column; gap:0; }
-  .identity-item{
-    display:grid; grid-template-columns: 140px 1fr; gap:18px; padding:16px 0;
-    border-top:1px solid var(--border);
-  }
+  .identity-item{ border-top:1px solid var(--border); }
   .identity-item:first-child{ border-top:none; }
-  .identity-item .label{ font-weight:700; font-size:14px; padding-top:1px; }
-  .identity-item .label.tech{ color:var(--tech); }
-  .identity-item .label.gestao{ color:var(--gestao); }
-  .identity-item .label.educ{ color:var(--educ); }
   .identity-item p{ margin:0; color: var(--text-muted); font-size:14.5px; }
-  @media (max-width:560px){
-    .identity-item{ grid-template-columns: 1fr; gap:4px; }
-  }
 
-  /* ---------- Como gosto de ensinar: itens em acordeão ---------- */
-  #como-ensino .identity-item{ display:block; padding:0; }
-  #como-ensino .identity-item summary{
+  /* ---------- Identity strip: itens em acordeão ---------- */
+  .identity-strip.accordion .identity-item{ display:block; padding:0; }
+  .identity-strip.accordion .identity-item summary{
     display:flex; align-items:center; justify-content:space-between; gap:16px;
     padding:16px 0; cursor:pointer; list-style:none; font-weight:700; font-size:14px;
   }
-  #como-ensino .identity-item summary::-webkit-details-marker{ display:none; }
-  #como-ensino .identity-item summary::after{
+  .identity-strip.accordion .identity-item summary::-webkit-details-marker{ display:none; }
+  .identity-strip.accordion .identity-item summary.tech{ color:var(--tech); }
+  .identity-strip.accordion .identity-item summary.gestao{ color:var(--gestao); }
+  .identity-strip.accordion .identity-item summary.educ{ color:var(--educ); }
+  .identity-strip.accordion .identity-item summary::after{
     content:"+"; flex-shrink:0; font-weight:400; font-size:20px; line-height:1;
     color: var(--text-muted);
   }
-  #como-ensino .identity-item[open] summary::after{ content:"–"; }
-  #como-ensino .identity-item p{ margin:0 0 16px; }
+  .identity-strip.accordion .identity-item[open] summary::after{ content:"–"; }
+  .identity-strip.accordion .identity-item p{ margin:0 0 16px; }
 
   /* ---------- Timeline ---------- */
   .timeline{ position:relative; margin-top: 20px; }
@@ -596,23 +589,23 @@
         <h2 class="eyebrow">Quem sou hoje</h2>
         <p>Atuo em cursos técnicos integrados, EJA e cursos superiores.</p>
       </div>
-      <div class="identity-strip reveal">
-        <div class="identity-item">
-          <span class="label tech">Tecnologia</span>
+      <div class="identity-strip accordion reveal">
+        <details class="identity-item">
+          <summary class="tech">Tecnologia</summary>
           <p>Desde 2006, construo uma trajetória ligada à tecnologia, à programação, à informática, às ferramentas de gestão e à aplicação da tecnologia na educação.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label gestao">Gestão</span>
+        </details>
+        <details class="identity-item">
+          <summary class="gestao">Gestão</summary>
           <p>Tenho anos de liderança de equipes e operações na indústria e em serviços, com foco em processos, qualidade e pessoas.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label educ">Educação</span>
+        </details>
+        <details class="identity-item">
+          <summary class="educ">Educação</summary>
           <p>Sou mestre em Educação Profissional e Tecnológica, licenciado, pós-graduado em Docência para Educação Profissional e Tecnológica, com experiência docente no SENAC, no SENAI e hoje no IFSUL. Essa trajetória, do técnico ao mestrado, toda dentro da rede federal, é o que busco mostrar aos meus alunos: que esse caminho é possível.</p>
-        </div>
-        <div class="identity-item">
-          <span class="label">Atuação atual</span>
+        </details>
+        <details class="identity-item">
+          <summary>Atuação atual</summary>
           <p>Além da docência, atuo em diversos projetos de ensino, extensão e comissões acadêmicas. Também já atuei na Coordenação de Almoxarifado e Patrimônio e na implantação do curso superior de ADS.</p>
-        </div>
+        </details>
       </div>
     </div>
   </section>
@@ -625,7 +618,7 @@
         <h2>Como gosto de ensinar</h2>
         <p>Ensinar na rede pública é acreditar que a educação pode abrir portas. Pra mim, aprender uma profissão e aprender a ser cidadão caminham juntos.</p>
       </div>
-      <div class="identity-strip reveal">
+      <div class="identity-strip accordion reveal">
         <details class="identity-item">
           <summary>Tecnologia na prática</summary>
           <p>Não ensino uma ferramenta pela ferramenta. Procuro entender com os estudantes que problemas ela resolve, que possibilidades cria e que impactos produz. A tecnologia faz parte do trabalho e da sociedade, então aprender a usá-la também é aprender a questionar e agir sobre a realidade.</p>
