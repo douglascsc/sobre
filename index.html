@@ -461,15 +461,6 @@
     .hero-photo{ order:2; align-self:auto; }
   }
 
-  .before-after .container > .section-head{ margin-bottom:24px; }
-  .before-after-grid{ display:grid; grid-template-columns:1fr 1fr; gap:16px; max-width:620px; }
-  .ba-item{ position:relative; border-radius: var(--radius); box-shadow: var(--shadow); border:1px solid var(--border); aspect-ratio: 3/4; }
-  .ba-item figcaption{
-    position:absolute; left:10px; bottom:10px; font-size:12.5px; font-weight:700;
-    background: color-mix(in srgb, var(--bg) 82%, transparent); color: var(--text);
-    padding:4px 10px; border-radius:100px;
-  }
-
   .thumb{
     float:none; width:100%; aspect-ratio: 16/9; margin:0 0 16px; border-radius:var(--radius-sm);
     box-shadow: var(--shadow); border:1px solid var(--border);
@@ -581,27 +572,6 @@
       <figure class="ph hero-photo">
         <img src="fotos/retrato.jpg" alt="Retrato de Douglas Camargo Carvalho" loading="lazy" onerror="this.closest('.hero-photo').remove()">
       </figure>
-    </div>
-  </section>
-
-  <!-- ANTES E DEPOIS -->
-  <section class="before-after ph-group-section">
-    <div class="container">
-      <div class="section-head reveal">
-        <p class="eyebrow">Duas fotos, a mesma trajetória</p>
-        <h2>2006 → hoje</h2>
-        <p>Do início da trajetória até hoje.</p>
-      </div>
-      <div class="before-after-grid ph-group reveal">
-        <figure class="ph ba-item">
-          <img src="fotos/antes-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.ba-item').remove()">
-          <figcaption>2006 - o início</figcaption>
-        </figure>
-        <figure class="ph ba-item">
-          <img src="fotos/depois-2026.jpg" alt="Foto atual" loading="lazy" onerror="this.closest('.ba-item').remove()">
-          <figcaption>2026 - hoje</figcaption>
-        </figure>
-      </div>
     </div>
   </section>
 
