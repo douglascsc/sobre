@@ -14,11 +14,13 @@
 <meta property="og:url" content="https://douglascsc.github.io/sobre/">
 <meta property="og:title" content="Douglas Camargo Carvalho - Professor EBTT, Área de Informação e Comunicação, IFSUL">
 <meta property="og:description" content="Uma trajetória construída entre tecnologia, gestão e educação, desde 2006.">
-<meta property="og:image" content="https://douglascsc.github.io/sobre/fotos/retrato.jpg">
+<meta property="og:image" content="https://douglascsc.github.io/sobre/fotos/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Douglas Camargo Carvalho - Professor EBTT, Área de Informação e Comunicação, IFSUL">
 <meta name="twitter:description" content="Uma trajetória construída entre tecnologia, gestão e educação, desde 2006.">
-<meta name="twitter:image" content="https://douglascsc.github.io/sobre/fotos/retrato.jpg">
+<meta name="twitter:image" content="https://douglascsc.github.io/sobre/fotos/og-image.jpg">
 
 <script type="application/ld+json">
 {
@@ -1183,7 +1185,7 @@
 
 <footer id="contato">
   <div class="container foot-inner">
-    <p>2026 - Prof. Douglas Camargo Carvalho</p>
+    <p><span id="footYear">2026</span> - Prof. Douglas Camargo Carvalho</p>
     <div class="foot-links">
       <a href="#inicio">Voltar ao topo</a>
       <a class="social-link" href="https://www.instagram.com/prof.douglasc" target="_blank" rel="noopener" aria-label="Instagram: @prof.douglasc">
@@ -1194,6 +1196,9 @@
 </footer>
 
 <script>
+  // ano do rodapé
+  document.getElementById('footYear').textContent = new Date().getFullYear();
+
   // menu mobile
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
