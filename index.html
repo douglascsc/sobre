@@ -501,6 +501,12 @@
     .mini-photos{ max-width:360px; }
   }
 
+  .gallery-wrap{ position:relative; }
+  .gallery-wrap::after{
+    content:""; position:absolute; top:0; right:0; bottom:14px; width:64px;
+    background:linear-gradient(to right, transparent, var(--fade-bg, var(--bg)) 75%);
+    pointer-events:none;
+  }
   .gallery{
     display:flex; gap:12px; overflow-x:auto; padding: 4px 4px 14px; scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
@@ -1125,15 +1131,17 @@
         <h2>E a vida pessoal?</h2>
         <p>Sou corredor, já completei uma maratona (42km) e mais de 20 meias maratonas (21km). Sou marido, pai de dois filhos e gosto de estar sempre aprendendo coisas novas.</p>
       </div>
-      <div class="gallery ph-group reveal">
-        <figure class="ph gitem"><img src="fotos/pessoal-1.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/pessoal-2.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/pessoal-3.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/pessoal-4.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/pessoal-5.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/pessoal-6.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/pessoal-7.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/pessoal-8.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+      <div class="gallery-wrap" style="--fade-bg:var(--bg-alt);">
+        <div class="gallery ph-group reveal">
+          <figure class="ph gitem"><img src="fotos/pessoal-1.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/pessoal-2.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/pessoal-3.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/pessoal-4.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/pessoal-5.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/pessoal-6.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/pessoal-7.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/pessoal-8.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+        </div>
       </div>
     </div>
   </section>
@@ -1146,19 +1154,21 @@
         <h2>Indústria, serviços, tecnologia e sala de aula</h2>
         <p>Alguns registros desde 2006.</p>
       </div>
-      <div class="gallery ph-group reveal">
-        <figure class="ph gitem"><img src="fotos/bastidores-1.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-2.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-3.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-4.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-5.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-6.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-7.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-8.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-9.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-10.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-11.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
-        <figure class="ph gitem"><img src="fotos/bastidores-12.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+      <div class="gallery-wrap">
+        <div class="gallery ph-group reveal">
+          <figure class="ph gitem"><img src="fotos/bastidores-1.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-2.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-3.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-4.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-5.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-6.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-7.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-8.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-9.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-10.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-11.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+          <figure class="ph gitem"><img src="fotos/bastidores-12.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
+        </div>
       </div>
     </div>
   </section>
