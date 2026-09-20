@@ -473,18 +473,6 @@
   .thumb-pair .ph{ aspect-ratio:4/3; border-radius:10px; box-shadow: var(--shadow); border:1px solid var(--border); }
   @media (min-width:560px){ .thumb-pair{ float:right; width:300px; margin:0 0 14px 20px; } }
 
-  /* ---------- Quem sou hoje: foto ao lado da lista ---------- */
-  .qsh-flex{ display:flex; flex-direction:column; gap:28px; }
-  .qsh-photo{
-    flex:0 0 220px; width:220px; aspect-ratio: 4/5; border-radius: var(--radius);
-    box-shadow: var(--shadow); border:1px solid var(--border); align-self:center;
-  }
-  @media (min-width:820px){
-    .qsh-flex{ flex-direction:row; align-items:flex-start; gap:40px; }
-    .qsh-flex .identity-strip{ flex:1 1 auto; min-width:0; }
-    .qsh-photo{ align-self:auto; order:2; }
-  }
-
   /* ---------- Como gosto de ensinar: foto em destaque ---------- */
   .como-ensino-photo{
     aspect-ratio: 16/9; border-radius: var(--radius); box-shadow: var(--shadow);
@@ -603,28 +591,23 @@
         <h2 class="eyebrow">Quem sou hoje</h2>
         <p>Atuo em cursos técnicos integrados, EJA e cursos superiores.</p>
       </div>
-      <div class="qsh-flex">
-        <div class="identity-strip reveal">
-          <div class="identity-item">
-            <span class="label tech">Tecnologia</span>
-            <p>Desde 2006, construo uma trajetória ligada à tecnologia, à programação, à informática, às ferramentas de gestão e à aplicação da tecnologia na educação.</p>
-          </div>
-          <div class="identity-item">
-            <span class="label gestao">Gestão</span>
-            <p>Tenho anos de liderança de equipes e operações na indústria e em serviços, com foco em processos, qualidade e pessoas.</p>
-          </div>
-          <div class="identity-item">
-            <span class="label educ">Educação</span>
-            <p>Sou mestre em Educação Profissional e Tecnológica, licenciado, pós-graduado em Docência para Educação Profissional e Tecnológica, com experiência docente no SENAC, no SENAI e hoje no IFSUL. Essa trajetória, do técnico ao mestrado, toda dentro da rede federal, é o que busco mostrar aos meus alunos: que esse caminho é possível.</p>
-          </div>
-          <div class="identity-item">
-            <span class="label">Atuação atual</span>
-            <p>Além da docência, atuo em diversos projetos de ensino, extensão e comissões acadêmicas. Também já atuei na Coordenação de Almoxarifado e Patrimônio e na implantação do curso superior de ADS.</p>
-          </div>
+      <div class="identity-strip reveal">
+        <div class="identity-item">
+          <span class="label tech">Tecnologia</span>
+          <p>Desde 2006, construo uma trajetória ligada à tecnologia, à programação, à informática, às ferramentas de gestão e à aplicação da tecnologia na educação.</p>
         </div>
-        <figure class="ph qsh-photo reveal">
-          <img src="fotos/quem-sou-hoje.jpg" alt="Douglas em contexto profissional" loading="lazy" onerror="this.closest('.qsh-photo').remove()">
-        </figure>
+        <div class="identity-item">
+          <span class="label gestao">Gestão</span>
+          <p>Tenho anos de liderança de equipes e operações na indústria e em serviços, com foco em processos, qualidade e pessoas.</p>
+        </div>
+        <div class="identity-item">
+          <span class="label educ">Educação</span>
+          <p>Sou mestre em Educação Profissional e Tecnológica, licenciado, pós-graduado em Docência para Educação Profissional e Tecnológica, com experiência docente no SENAC, no SENAI e hoje no IFSUL. Essa trajetória, do técnico ao mestrado, toda dentro da rede federal, é o que busco mostrar aos meus alunos: que esse caminho é possível.</p>
+        </div>
+        <div class="identity-item">
+          <span class="label">Atuação atual</span>
+          <p>Além da docência, atuo em diversos projetos de ensino, extensão e comissões acadêmicas. Também já atuei na Coordenação de Almoxarifado e Patrimônio e na implantação do curso superior de ADS.</p>
+        </div>
       </div>
     </div>
   </section>

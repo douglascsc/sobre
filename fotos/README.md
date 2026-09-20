@@ -9,7 +9,6 @@ Todas as fotos recebem automaticamente um tratamento em preto e branco (ficam co
 | `retrato.jpg` | Topo da página (herói) | Retrato vertical, enquadramento de busto, formato ~4:5 |
 | `antes-2006.jpg` | Comparativo "2006 — 2026" | Foto de época, 2006–2008, formato ~3:4 |
 | `depois-2026.jpg` | Comparativo "2006 — 2026" | Foto atual, formato ~3:4, mesmo enquadramento da anterior se possível |
-| `quem-sou-hoje.jpg` | Seção "Quem sou hoje", ao lado da lista | Foto atual, em contexto profissional (não still de estúdio), formato ~4:5 |
 | `como-ensino-sala.jpg` | Seção "Como gosto de ensinar", entre "Pensamento crítico" e "Ponto de partida" | Interação real com estudantes, espontânea, formato largo ~16:9 |
 | `timeline-2006.jpg` | Card de 2006 (O início) na linha do tempo | Foto de época do curso/Fundação Liberato/MOSTRATEC, se existir |
 | `timeline-voluntariado.png` | Card de 2014–2018 na linha do tempo | Voluntariado (Terra Viva) |
