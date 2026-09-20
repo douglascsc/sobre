@@ -60,6 +60,7 @@
     --shadow: 0 1px 2px rgba(28,27,25,.04), 0 6px 20px rgba(28,27,25,.05);
     --shadow-hover: 0 2px 4px rgba(28,27,25,.05), 0 10px 24px rgba(28,27,25,.07);
     --radius: 14px;
+    --radius-sm: 10px;
     --serif: "Source Serif 4", Georgia, serif;
     --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     --mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
@@ -372,7 +373,7 @@
     padding: 22px; box-shadow: var(--shadow); transition: transform .2s ease, box-shadow .2s ease;
   }
   .rec-card .icon{
-    width:36px; height:36px; border-radius:10px; background: var(--bg-alt);
+    width:36px; height:36px; border-radius:var(--radius-sm); background: var(--bg-alt);
     display:flex; align-items:center; justify-content:center; margin-bottom:14px; color: var(--text);
   }
   .rec-card h3{ font-size:16px; font-family:var(--sans); font-weight:700; margin-bottom:6px; }
@@ -439,7 +440,7 @@
   }
   .lightbox.open{ display:flex; }
   .lightbox img{
-    max-width:100%; max-height:100%; border-radius:10px; display:block;
+    max-width:100%; max-height:100%; border-radius:var(--radius-sm); display:block;
     box-shadow: 0 20px 60px rgba(0,0,0,.4);
   }
   .lightbox-close{
@@ -470,7 +471,7 @@
   }
 
   .thumb{
-    float:none; width:100%; aspect-ratio: 16/9; margin:0 0 16px; border-radius:10px;
+    float:none; width:100%; aspect-ratio: 16/9; margin:0 0 16px; border-radius:var(--radius-sm);
     box-shadow: var(--shadow); border:1px solid var(--border);
     position:relative; z-index:1;
   }
@@ -481,7 +482,7 @@
   @media (min-width:560px){ .thumb-caption{ float:right; clear:right; width:240px; margin:-10px 20px 14px 0; text-align:right; } }
 
   .thumb-pair{ display:flex; flex-direction:column; gap:10px; width:320px; max-width:100%; margin:0 auto 16px; position:relative; z-index:1; }
-  .thumb-pair .ph{ aspect-ratio:4/3; border-radius:10px; box-shadow: var(--shadow); border:1px solid var(--border); }
+  .thumb-pair .ph{ aspect-ratio:4/3; border-radius:var(--radius-sm); box-shadow: var(--shadow); border:1px solid var(--border); }
   @media (min-width:560px){ .thumb-pair{ float:right; width:300px; margin:0 0 14px 20px; } }
 
   /* ---------- Como gosto de ensinar: foto em destaque ---------- */
