@@ -247,6 +247,7 @@
     padding: 20px 22px; box-shadow: var(--shadow);
     transition: transform .2s ease, box-shadow .2s ease;
   }
+  .t-card::after{ content:""; display:table; clear:both; }
   .t-card:hover, .rec-card:hover, .gestao-card:hover, .pub-card:hover{
     transform: translateY(-2px); box-shadow: var(--shadow-hover);
   }
@@ -852,10 +853,6 @@
             <div class="t-block" style="margin-top:8px;">
               <h4>2020 - Pandemia / Operação remota</h4>
               <p style="margin:0;color:var(--text-muted);font-size:14.5px;">Coordenei, num mutirão coletivo, a transição de toda a operação para o modelo remoto, com atenção ao lado humano do momento.</p>
-              <div class="mini-photos">
-                <figure class="ph mp-item"><img src="fotos/timeline-pandemia-1.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.closest('.mp-item').remove()"></figure>
-                <figure class="ph mp-item"><img src="fotos/timeline-pandemia-2.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.closest('.mp-item').remove()"></figure>
-              </div>
             </div>
             <div class="t-block" style="margin-top:2px;">
               <span class="t-kind formacao">Voluntariado</span>
@@ -1066,6 +1063,10 @@
           <h3>Operação remota durante a pandemia</h3>
           <p class="meta">Ticket Log / Edenred · 2020</p>
           <p>Durante a pandemia, coordenei junto com a equipe, num mutirão coletivo, a transição de toda a operação para o modelo remoto, com atenção ao lado humano daquele momento. Flexibilizamos horários, mantivemos contato próximo com cada pessoa e demos suporte além do trabalho, num período difícil pra todos.</p>
+          <div class="rec-photo-grid">
+            <figure class="ph"><img src="fotos/timeline-pandemia-1.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.parentElement.remove()"></figure>
+            <figure class="ph"><img src="fotos/timeline-pandemia-2.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          </div>
         </div>
         <div class="rec-card" style="grid-column:1/-1;">
           <div class="icon">
