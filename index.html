@@ -611,6 +611,10 @@
   .foot-notes{ display:flex; flex-direction:column; gap:6px; max-width:520px; }
   .foot-notes p{ margin:0; color: var(--text-faint); font-size:12.5px; line-height:1.6; }
   .foot-notes a{ color: var(--text-muted); font-weight:600; }
+  @media (min-width: 641px){
+    .foot-notes{ flex-direction:row; flex-wrap:wrap; column-gap:6px; row-gap:2px; max-width:none; }
+    .foot-notes p + p::before{ content:"· "; }
+  }
 
   /* ---------- Impressão ---------- */
   @media print{
