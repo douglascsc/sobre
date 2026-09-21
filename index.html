@@ -452,14 +452,16 @@
 
   /* ---------- Marcos da trajetória: card em acordeão ---------- */
   .rec-card > summary{
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
     cursor:pointer; list-style:none; font-size:16px; font-family:var(--sans); font-weight:700;
   }
   .rec-card > summary::-webkit-details-marker{ display:none; }
-  .rec-card > summary::after{
+  .rec-card > summary .s-row{
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .rec-card > summary .s-row::after{
     content:"+"; flex-shrink:0; font-weight:400; font-size:20px; line-height:1; color: var(--text-muted);
   }
-  .rec-card[open] > summary::after{ content:"–"; }
+  .rec-card[open] > summary .s-row::after{ content:"–"; }
   .rec-card[open] > summary{ margin-bottom:14px; }
 
   /* ---------- Proof chain ---------- */
@@ -1226,12 +1228,15 @@
           </ul>
         </div>
         <details class="rec-card" style="grid-column:1/-1;">
-          <summary>Aprovações em concursos públicos</summary>
-          <div class="icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/></svg>
-          </div>
+          <summary>
+            <div class="icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="9" r="5"/><path d="M8.5 13.5 7 21l5-3 5 3-1.5-7.5"/></svg>
+            </div>
+            <span class="s-row">Aprovações em concursos públicos</span>
+          </summary>
           <p class="meta">Persistência e preparação ao longo dos anos</p>
           <p>Fui nomeado em mais de 5 concursos públicos, além de outras aprovações.</p>
+          <span class="t-kind neutro" style="margin-top:10px;">Nomeações</span>
           <ul class="t-list">
             <li>Assistente Administrativo - Prefeitura de Porto Alegre (2010).</li>
             <li>Professor de Ensino Técnico - Governo do Estado do RS (2025 e 2026).</li>
