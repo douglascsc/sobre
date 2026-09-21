@@ -464,6 +464,17 @@
   .rec-card[open] > summary .s-row::after{ content:"–"; }
   .rec-card[open] > summary{ margin-bottom:14px; }
 
+  .t-list .li-more > summary{
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+    cursor:pointer; list-style:none;
+  }
+  .t-list .li-more > summary::-webkit-details-marker{ display:none; }
+  .t-list .li-more > summary::after{
+    content:"+"; flex-shrink:0; font-weight:400; font-size:16px; line-height:1; color: var(--text-faint);
+  }
+  .t-list .li-more[open] > summary::after{ content:"–"; }
+  .t-list .li-more > p{ margin:6px 0 0; font-size:13.5px; color: var(--text-faint); }
+
   /* ---------- Proof chain ---------- */
   .chain{ display:flex; flex-direction:column; }
   .chain-item{
@@ -1221,23 +1232,30 @@
             <figure class="ph mp-item"><img src="fotos/timeline-pandemia-2.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.parentElement.remove()"></figure>
           </div>
         </div>
-        <div class="rec-card" style="grid-column:1/-1;">
-          <div class="icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
-          </div>
-          <h3>Atuação acadêmica e científica</h3>
+        <details class="rec-card" style="grid-column:1/-1;">
+          <summary>
+            <div class="icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg>
+            </div>
+            <span class="s-row">Atuação acadêmica e científica</span>
+          </summary>
           <p class="meta">Avaliação de projetos, feiras de ciência e tecnologia e bancas acadêmicas</p>
           <ul class="t-list">
             <li>Avaliador - MOSTRATEC, Fundação Liberato (2021–2026).</li>
             <li>Avaliador - 46ª Feira de Ciências, IENH (2022).</li>
-            <li>Membro de banca de trabalho de conclusão de curso - IFSUL (2023).</li>
+            <li>
+              <details class="li-more">
+                <summary>Membro de banca de trabalho de conclusão de curso - IFSUL (2023)</summary>
+                <p>Participação em banca de Vânia Cristina Oliveira da Silva. "A qualidade como vantagem competitiva para a educação a distância em instituições de ensino". 2023. Trabalho de Conclusão de Curso (Graduação em Formação Pedagógica para Graduados Não Licenciados) - Instituto Federal Sul-Rio-Grandense.</p>
+              </details>
+            </li>
             <li>Organizador de evento - Espaço de Educação Tecnológica (Mind Makers) para o MOPIC, Colégio Sinodal Tiradentes (2024).</li>
             <li>Orientador de projetos de iniciação científica - Colégio Sinodal Tiradentes (2025).</li>
             <li>Avaliador - FECITEC, Prefeitura de Campo Bom (2025–2026).</li>
             <li>Avaliador - MOPIC, Colégio Sinodal Tiradentes (2026).</li>
             <li>Avaliador de projetos de pesquisa para o Edital Unificado de Pesquisa 2026 - PIBIC Jr, IFPR (2026).</li>
           </ul>
-        </div>
+        </details>
         <details class="rec-card" style="grid-column:1/-1;">
           <summary>
             <div class="icon">
