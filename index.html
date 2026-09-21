@@ -361,6 +361,7 @@
     content:""; position:absolute; left:5px; top:6px; bottom:6px; width:1px; background:var(--border);
   }
   .exp-node{ position:relative; padding-left:26px; }
+  .exp-node::after{ content:""; display:table; clear:both; }
   .exp-node + .exp-node{ margin-top:32px; }
   .exp-node::before{
     content:""; position:absolute; left:0; top:6px; width:11px; height:11px; border-radius:50%;
@@ -772,30 +773,36 @@
           <h3 class="t-title">O início: tecnologia, informática e a primeira vez ensinando</h3>
           <div class="t-card">
             <div class="t-tags"><span class="tag educ">Educação</span><span class="tag tech">Tecnologia</span></div>
-            <div class="t-block">
-              <span class="t-kind formacao">Formação</span>
-              <h4>Desenvolvimento em C e C++ - Fundação Liberato</h4>
-              <p style="margin:0;color:var(--text-muted);font-size:14.5px;">Ensino Médio - Tive meu primeiro contato estruturado com programação.</p>
-            </div>
-            <div class="t-block">
-              <figure class="ph thumb"><img src="fotos/timeline-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
-              <span class="t-kind tecnologia">Projeto</span>
-              <h4>MOSTRATEC - Expositor</h4>
-              <p style="margin:0;color:var(--text-muted);font-size:14.5px;">Projeto "Semáforo Inteligente".</p>
-            </div>
-            <div class="t-block">
-              <h4>Cursos de Informática - SUPREMA</h4>
-              <div class="t-chips">
-                <span class="chip">Lógica de programação</span>
-                <span class="chip">Visual Basic</span>
-                <span class="chip">HTML</span>
-                <span class="chip">FrontPage</span>
-                <span class="chip">Flash</span>
-                <span class="chip">Fireworks</span>
-                <span class="chip">Photoshop</span>
-                <span class="chip">Access</span>
-                <span class="chip">Montagem e manutenção de PCs</span>
-                <span class="chip">e muitos outros</span>
+            <div class="exp-list">
+              <div class="exp-node">
+                <span class="exp-period">2003–2006</span>
+                <span class="t-kind formacao">Formação</span>
+                <h4 class="exp-company">Desenvolvimento em C e C++ - Fundação Liberato</h4>
+                <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Ensino Médio - Tive meu primeiro contato estruturado com programação.</p>
+              </div>
+              <div class="exp-node">
+                <span class="exp-period">2006</span>
+                <span class="t-kind tecnologia">Projeto</span>
+                <h4 class="exp-company">MOSTRATEC - Expositor</h4>
+                <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Projeto "Semáforo Inteligente".</p>
+                <figure class="ph thumb" style="margin-top:14px;"><img src="fotos/timeline-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
+              </div>
+              <div class="exp-node">
+                <span class="exp-period">2003–2006</span>
+                <span class="t-kind formacao">Formação</span>
+                <h4 class="exp-company">Cursos de Informática - SUPREMA</h4>
+                <div class="t-chips">
+                  <span class="chip">Lógica de programação</span>
+                  <span class="chip">Visual Basic</span>
+                  <span class="chip">HTML</span>
+                  <span class="chip">FrontPage</span>
+                  <span class="chip">Flash</span>
+                  <span class="chip">Fireworks</span>
+                  <span class="chip">Photoshop</span>
+                  <span class="chip">Access</span>
+                  <span class="chip">Montagem e manutenção de PCs</span>
+                  <span class="chip">e muitos outros</span>
+                </div>
               </div>
             </div>
             <p class="t-quote">Aqui nasceu uma característica que me acompanha em toda a trajetória: aprender, aplicar e compartilhar conhecimento.</p>
