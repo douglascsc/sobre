@@ -77,7 +77,7 @@
     :root:not([data-theme="light"]){
       --bg: #15140f;
       --bg-alt: #1c1b16;
-      --surface: #1f1e18;
+      --surface: #28261c;
       --text: #f2f0e8;
       --text-muted: #b2b0a5;
       --text-faint: #87857b;
@@ -96,7 +96,7 @@
     }
   }
   :root[data-theme="dark"]{
-    --bg: #15140f; --bg-alt:#1c1b16; --surface:#1f1e18; --text:#f2f0e8; --text-muted:#b2b0a5;
+    --bg: #15140f; --bg-alt:#1c1b16; --surface:#28261c; --text:#f2f0e8; --text-muted:#b2b0a5;
     --text-faint:#87857b; --border:#34322a; --tech:#7ea2ff; --tech-bg:#1c2740; --gestao:#e2a94f;
     --gestao-bg:#3a2c14; --educ:#6fcf9e; --educ-bg:#16342a; --accent:#f2f0e8;
     --btn-bg: #6fcf9e; --btn-text: #15140f;
@@ -225,9 +225,9 @@
   }
 
   /* ---------- Hero ---------- */
-  .hero{ padding: 84px 0 36px; }
+  .hero{ padding: 84px 0 20px; }
   @media (max-width: 819px){
-    .hero{ padding-top: 36px; padding-bottom: 24px; }
+    .hero{ padding-top: 36px; padding-bottom: 14px; }
   }
   .hero .eyebrow{ color: var(--text-faint); }
   .hero .lede{ font-size: 18px; color: var(--text-muted); max-width: 640px; margin-bottom: 10px; }
@@ -282,10 +282,6 @@
   }
   .identity-strip.accordion .identity-item[open] summary::after{ content:"–"; }
   .identity-strip.accordion .identity-item p{ margin:0 0 16px; }
-
-  /* ---------- Como gosto de ensinar: acento de cor único (educação) ---------- */
-  #como-ensino .identity-item summary::after{ color: var(--educ); }
-  #como-ensino .identity-item[open] summary{ color: var(--educ); }
 
   /* ---------- Timeline ---------- */
   .timeline{ position:relative; margin-top: 20px; }
@@ -413,9 +409,9 @@
   /* ---------- Bridges (microtextos de transicao entre secoes) ---------- */
   .bridge{
     font-family: var(--serif); font-style: italic; font-size: 17px; line-height:1.6;
-    color: var(--text-muted); max-width: 620px; margin: 0 auto; padding: 36px 24px;
+    color: var(--text-muted); max-width: 620px; margin: 0 auto; padding: 20px 24px;
   }
-  @media (max-width:640px){ .bridge{ font-size:15.5px; padding: 24px; } }
+  @media (max-width:640px){ .bridge{ font-size:15.5px; padding: 14px 24px; } }
   .bridge-lead{
     font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--text-muted);
     margin: 0 0 18px;
@@ -981,6 +977,7 @@
               <p style="margin:0;color:var(--text-muted);font-size:14.5px;">Pela atuação coletiva na gestão de um incidente crítico de segurança.</p>
             </div>
             <div class="t-block" style="margin-top:8px;">
+              <span class="t-kind neutro">Marcos da trajetória (<a href="#reconhecimentos" style="color:var(--gestao);">ver detalhes</a>)</span>
               <h4>2020 - Pandemia / Operação remota</h4>
               <p style="margin:0;color:var(--text-muted);font-size:14.5px;">Coordenei, num mutirão coletivo, a transição de toda a operação para o modelo remoto, com atenção ao lado humano do momento.</p>
             </div>
@@ -1066,8 +1063,8 @@
               <p class="exp-role">Conclusão de Graduação</p>
               <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Retomo e aprofundo uma conexão presente desde 2003: programação → informática → sistemas → tecnologia educacional.</p>
             </div>
-            <div class="t-block" style="margin-top:26px;">
-              <h4>Mestrado em Educação Profissional e Tecnológica - IFSUL</h4>
+            <div class="exp-node solo">
+              <h4 class="exp-company">Mestrado em Educação Profissional e Tecnológica - IFSUL</h4>
             </div>
           </div>
         </article>
