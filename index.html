@@ -614,6 +614,7 @@
   @media (min-width: 641px){
     .foot-notes{ flex-direction:row; flex-wrap:wrap; column-gap:6px; row-gap:2px; max-width:none; }
     .foot-notes p + p::before{ content:"· "; }
+    .foot-notes p.no-dot::before{ content:none; }
   }
 
   /* ---------- Impressão ---------- */
@@ -665,12 +666,12 @@
         <p class="lede">Em minha trajetória profissional, a curiosidade pela tecnologia sempre caminhou ao lado do desejo de aprender, compartilhar conhecimento e encontrar novas formas de fazer melhor.</p>
         <p class="lede">Ao longo dos anos, atuei na indústria e em serviços, passando por qualidade, processos, melhoria contínua e gestão de equipes. Formei e liderei equipes, conduzi treinamentos, implementei soluções e aprendi, na prática, a transformar problemas em oportunidades de melhoria.</p>
         <p class="lede">Com o tempo, essas experiências se conectaram e passaram a dar um novo sentido à minha trajetória: usar o conhecimento e a tecnologia para ajudar outras pessoas a crescer, conquistar autonomia e desenvolver um olhar mais crítico sobre o mundo.</p>
-        <p class="hero-close">O que vem a seguir é um pouco dessa trajetória, e também um pouco de quem eu sou além dela.</p>
         <div class="pillars">
           <span class="pill tech"><span class="dot"></span>Tecnologia</span>
           <span class="pill gestao"><span class="dot"></span>Gestão</span>
           <span class="pill educ"><span class="dot"></span>Educação</span>
         </div>
+        <p class="hero-close">O que vem a seguir é um pouco dessa trajetória, e também um pouco de quem eu sou além dela.</p>
       </div>
       <figure class="ph hero-photo">
         <img src="fotos/retrato.jpg" alt="Retrato de Douglas Camargo Carvalho" loading="lazy" onerror="this.closest('.hero-photo').remove()">
@@ -784,14 +785,14 @@
                 <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Ensino Médio - Tive meu primeiro contato estruturado com programação.</p>
               </div>
               <div class="exp-node">
+                <figure class="ph thumb"><img src="fotos/timeline-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
                 <span class="exp-period">2006</span>
                 <span class="t-kind tecnologia">Projeto</span>
                 <h4 class="exp-company">MOSTRATEC - Expositor</h4>
                 <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Projeto "Semáforo Inteligente".</p>
-                <figure class="ph thumb" style="margin-top:14px;"><img src="fotos/timeline-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
               </div>
               <div class="exp-node">
-                <span class="exp-period">2003–2006</span>
+                <span class="exp-period">2006</span>
                 <span class="t-kind formacao">Formação</span>
                 <h4 class="exp-company">Cursos de Informática - SUPREMA</h4>
                 <div class="t-chips">
@@ -1247,10 +1248,10 @@
   <p class="bridge reveal">E fora da escola? Também existe o Douglas.</p>
 
   <!-- VIDA PESSOAL -->
-  <section id="vida-pessoal" style="background:var(--bg-alt);border-top:1px solid var(--border);">
+  <section id="vida-pessoal" style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
       <div class="section-head reveal">
-        <h2>E a vida pessoal?</h2>
+        <h2>Vida Pessoal</h2>
         <p>Sou corredor, já completei uma maratona (42km) e mais de 20 meias maratonas (21km). Sou marido, pai de dois filhos e gosto de estar sempre aprendendo coisas novas.</p>
       </div>
       <div class="gallery-wrap" style="--fade-bg:var(--bg-alt);">
@@ -1271,12 +1272,13 @@
     </div>
   </section>
 
+  <p class="bridge reveal">Alguns registros.</p>
+
   <!-- BASTIDORES -->
-  <section class="ph-group-section" id="bastidores" style="border-top:1px solid var(--border);">
+  <section class="ph-group-section" id="bastidores">
     <div class="container">
       <div class="section-head reveal">
         <h2>Indústria, serviços, tecnologia e sala de aula</h2>
-        <p>Alguns registros desde 2003.</p>
       </div>
       <div class="gallery-wrap">
         <div class="gallery ph-group reveal">
@@ -1327,7 +1329,7 @@
       <div class="foot-notes">
         <p>Atualizado em setembro de 2026.</p>
         <p>Este site não usa cookies de rastreamento nem roda analytics ou anúncios.</p>
-        <p>Aparece em alguma foto e prefere não estar? <a href="mailto:douglascamargo@ifsul.edu.br?subject=Remo%C3%A7%C3%A3o%20de%20foto%20do%20site">Me avise</a>.</p>
+        <p class="no-dot">Aparece em alguma foto e prefere não estar? <a href="mailto:douglascamargo@ifsul.edu.br?subject=Remo%C3%A7%C3%A3o%20de%20foto%20do%20site">Me avise</a>.</p>
       </div>
     </div>
   </div>
