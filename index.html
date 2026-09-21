@@ -63,6 +63,8 @@
     --educ: #1f8a5f;
     --educ-bg: #e7f5ee;
     --accent: #1c1b19;
+    --btn-bg: #19704c;
+    --btn-text: #faf9f6;
     --shadow: 0 1px 2px rgba(28,27,25,.04), 0 6px 20px rgba(28,27,25,.05);
     --shadow-hover: 0 2px 4px rgba(28,27,25,.05), 0 10px 24px rgba(28,27,25,.07);
     --radius: 14px;
@@ -87,6 +89,8 @@
       --educ: #6fcf9e;
       --educ-bg: #16342a;
       --accent: #f2f0e8;
+      --btn-bg: #6fcf9e;
+      --btn-text: #15140f;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
       --shadow-hover: 0 2px 4px rgba(0,0,0,.32), 0 14px 30px rgba(0,0,0,.36);
     }
@@ -95,6 +99,7 @@
     --bg: #15140f; --bg-alt:#1c1b16; --surface:#1f1e18; --text:#f2f0e8; --text-muted:#b2b0a5;
     --text-faint:#87857b; --border:#34322a; --tech:#7ea2ff; --tech-bg:#1c2740; --gestao:#e2a94f;
     --gestao-bg:#3a2c14; --educ:#6fcf9e; --educ-bg:#16342a; --accent:#f2f0e8;
+    --btn-bg: #6fcf9e; --btn-text: #15140f;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
     --shadow-hover: 0 2px 4px rgba(0,0,0,.32), 0 14px 30px rgba(0,0,0,.36);
   }
@@ -271,8 +276,9 @@
   .identity-strip.accordion .identity-item summary.gestao{ color:var(--gestao); }
   .identity-strip.accordion .identity-item summary.educ{ color:var(--educ); }
   .identity-strip.accordion .identity-item summary::after{
-    content:"+"; flex-shrink:0; font-weight:400; font-size:20px; line-height:1;
-    color: var(--text-muted);
+    content:"+"; flex-shrink:0; font-weight:400; font-size:15px; line-height:1;
+    color: var(--text-muted); width:24px; height:24px; border-radius:50%;
+    border:1px solid var(--border); display:flex; align-items:center; justify-content:center;
   }
   .identity-strip.accordion .identity-item[open] summary::after{ content:"–"; }
   .identity-strip.accordion .identity-item p{ margin:0 0 16px; }
@@ -460,7 +466,7 @@
     background: var(--surface); border:1px solid var(--border); border-radius: var(--radius);
     padding:16px 20px; display:flex; gap:16px; align-items:baseline; box-shadow: var(--shadow);
   }
-  .chain-item .year{ font-family: var(--mono); font-weight:600; font-size:15px; min-width:88px; letter-spacing:-0.01em; }
+  .chain-item .year{ font-family: var(--mono); font-weight:600; font-size:15px; min-width:88px; letter-spacing:-0.01em; color: var(--educ); }
   .chain-item p{ margin:0; font-size:14.5px; color: var(--text-muted); }
   .chain-arrow{ text-align:center; color: var(--text-faint); font-size:14px; padding:6px 0; }
 
@@ -482,7 +488,7 @@
   }
   .cta-box p{ color: var(--text-muted); max-width: 480px; margin: 8px auto 20px; font-size:15px; }
   .btn{
-    display:inline-flex; align-items:center; gap:8px; background: var(--accent); color: var(--bg);
+    display:inline-flex; align-items:center; gap:8px; background: var(--btn-bg); color: var(--btn-text);
     border:none; padding: 12px 22px; border-radius: 100px; font-weight:600; font-size:14.5px;
     cursor:pointer; font-family: var(--sans); text-decoration:none;
   }
@@ -682,8 +688,8 @@
   <!-- QUEM SOU HOJE -->
   <section id="quem-sou-hoje" style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-head reveal">
-        <h2 class="eyebrow">Quem sou hoje</h2>
+      <div class="section-head">
+        <h2>Quem sou hoje</h2>
         <p>Atuo em cursos técnicos integrados, EJA e cursos superiores.</p>
       </div>
       <div class="identity-strip accordion reveal">
@@ -712,7 +718,7 @@
   <!-- COMO GOSTO DE ENSINAR -->
   <section id="como-ensino">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head">
         <h2>Como gosto de ensinar</h2>
         <p>Ensinar na rede pública é acreditar que a educação pode abrir portas. Pra mim, aprender uma profissão e aprender a ser cidadão caminham juntos.</p>
       </div>
@@ -733,7 +739,7 @@
           <summary>Pensamento crítico</summary>
           <p>Mais importante do que saber operar uma ferramenta é entender por que ela existe e como se conecta com a realidade de quem está aprendendo.</p>
         </details>
-        <figure class="ph como-ensino-photo reveal">
+        <figure class="ph como-ensino-photo">
           <img src="fotos/como-ensino-sala.jpg" alt="Douglas em sala de aula, interagindo com estudantes" loading="lazy" onerror="this.closest('.como-ensino-photo').remove()">
         </figure>
         <details class="identity-item">
@@ -770,7 +776,7 @@
   <!-- TRAJETÓRIA -->
   <section id="trajetoria">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head">
         <h2>Linha do tempo</h2>
         <p>Uma trajetória iniciada em 2003, contada por três fios que caminham juntos desde o início.</p>
       </div>
@@ -794,7 +800,7 @@
                 <span class="t-kind tecnologia">Projeto</span>
                 <h4 class="exp-company">MOSTRATEC - Expositor</h4>
                 <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Projeto "Semáforo Inteligente".</p>
-                <div class="mini-photos" style="grid-template-columns:1fr;margin-top:14px;">
+                <div class="mini-photos" style="margin-top:14px;">
                   <figure class="ph mp-item"><img src="fotos/timeline-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.mp-item').remove()"></figure>
                 </div>
               </div>
@@ -937,7 +943,6 @@
           <div class="t-year">2018–2021</div>
           <h3 class="t-title">Gestão em escala e cuidado com as pessoas</h3>
           <div class="t-card">
-            <figure class="ph thumb"><img src="fotos/timeline-2018.jpg" alt="Foto de 2018-2021, Ticket Log/Edenred" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
             <div class="t-tags"><span class="tag gestao">Gestão</span><span class="tag tech">Tecnologia</span></div>
             <div class="exp-node solo">
               <h4 class="exp-company">Ticket Log / Edenred</h4>
@@ -960,6 +965,9 @@
                 <span class="chip">Automação</span>
                 <span class="chip">Simplificação de processos</span>
                 <span class="chip">Indicadores</span>
+              </div>
+              <div class="mini-photos" style="margin-top:14px;">
+                <figure class="ph mp-item"><img src="fotos/timeline-2018.jpg" alt="Foto de 2018-2021, Ticket Log/Edenred" loading="lazy" onerror="this.closest('.mp-item').remove()"></figure>
               </div>
             </div>
             <div class="t-block" style="margin-top:26px;">
@@ -1130,7 +1138,7 @@
   <!-- A EDUCAÇÃO SEMPRE ESTEVE PRESENTE -->
   <section style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head">
         <h2>A educação sempre esteve presente</h2>
       </div>
       <div class="chain reveal" style="max-width:620px;">
@@ -1156,7 +1164,7 @@
   <!-- MARCOS DA TRAJETÓRIA -->
   <section id="reconhecimentos">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head">
         <h2>Marcos da trajetória</h2>
         <p>Reconhecimentos, decisões difíceis e contribuições que dizem mais sobre quem eu sou do que qualquer cargo.</p>
       </div>
@@ -1225,7 +1233,7 @@
   <!-- PUBLICAÇÕES -->
   <section id="publicacoes" style="background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="container">
-      <div class="section-head reveal" style="margin-bottom:0;">
+      <div class="section-head" style="margin-bottom:0;">
         <h2 style="margin-bottom:0;">Produção acadêmica</h2>
       </div>
       <details class="t-more reveal">
@@ -1255,7 +1263,7 @@
   <!-- VIDA PESSOAL -->
   <section id="vida-pessoal">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head">
         <h2>Vida Pessoal</h2>
         <p>Sou corredor, já completei uma maratona (42km) e mais de 20 meias maratonas (21km). Sou marido, pai de dois filhos e gosto de estar sempre aprendendo coisas novas.</p>
       </div>
@@ -1282,7 +1290,7 @@
   <!-- BASTIDORES -->
   <section class="ph-group-section" id="bastidores" style="background:var(--bg-alt);border-top:1px solid var(--border);">
     <div class="container">
-      <div class="section-head reveal">
+      <div class="section-head">
         <h2>Indústria, serviços, tecnologia e sala de aula</h2>
       </div>
       <div class="gallery-wrap" style="--fade-bg:var(--bg-alt);">
