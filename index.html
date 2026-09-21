@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Douglas Camargo Carvalho - Tecnologia, Gestão e Educação</title>
 <meta name="description" content="Professor EBTT, Área de Informação e Comunicação, IFSUL. Uma trajetória construída entre tecnologia, gestão e educação, desde 2006.">
+<meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://douglascsc.github.io/sobre/">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23faf9f6'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' font-weight='600' fill='%231c1b19' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E">
 
@@ -453,11 +454,11 @@
 
   /* ---------- Fotos ---------- */
   .ph{ overflow:hidden; background: var(--bg-alt); }
-  .ph img{
-    width:100%; height:100%; object-fit:cover; display:block; cursor: zoom-in;
-    filter: grayscale(88%) contrast(1.05); transition: filter .5s ease;
+  .ph img{ width:100%; height:100%; object-fit:cover; display:block; cursor: zoom-in; }
+  @media (hover: hover) and (pointer: fine){
+    .ph img{ filter: grayscale(88%) contrast(1.05); transition: filter .5s ease; }
+    .ph:hover img{ filter:none; }
   }
-  .ph:hover img{ filter:none; }
 
   .lightbox{
     position:fixed; inset:0; z-index:200; display:none; align-items:center; justify-content:center;
@@ -606,6 +607,12 @@
       <div class="section-head reveal">
         <h2 class="eyebrow">Quem sou hoje</h2>
         <p>Atuo em cursos técnicos integrados, EJA e cursos superiores.</p>
+        <p style="margin-top:10px;font-size:15px;">
+          <strong>Contato acadêmico:</strong>
+          <a href="mailto:douglascamargo@ifsul.edu.br" style="color:var(--tech);font-weight:600;">douglascamargo@ifsul.edu.br</a>
+          ·
+          <a href="https://apnp.ifsul.edu.br/" target="_blank" rel="noopener" style="color:var(--tech);font-weight:600;">Moodle (AVA IFSUL)</a>
+        </p>
       </div>
       <div class="identity-strip accordion reveal">
         <details class="identity-item">
