@@ -63,8 +63,6 @@
     --educ: #1f8a5f;
     --educ-bg: #e7f5ee;
     --accent: #1c1b19;
-    --btn-bg: #19704c;
-    --btn-text: #faf9f6;
     --shadow: 0 1px 2px rgba(28,27,25,.04), 0 6px 20px rgba(28,27,25,.05);
     --shadow-hover: 0 2px 4px rgba(28,27,25,.05), 0 10px 24px rgba(28,27,25,.07);
     --radius: 14px;
@@ -89,8 +87,6 @@
       --educ: #6fcf9e;
       --educ-bg: #16342a;
       --accent: #f2f0e8;
-      --btn-bg: #6fcf9e;
-      --btn-text: #15140f;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
       --shadow-hover: 0 2px 4px rgba(0,0,0,.32), 0 14px 30px rgba(0,0,0,.36);
     }
@@ -99,7 +95,6 @@
     --bg: #15140f; --bg-alt:#1c1b16; --surface:#28261c; --text:#f2f0e8; --text-muted:#b2b0a5;
     --text-faint:#87857b; --border:#34322a; --tech:#7ea2ff; --tech-bg:#1c2740; --gestao:#e2a94f;
     --gestao-bg:#3a2c14; --educ:#6fcf9e; --educ-bg:#16342a; --accent:#f2f0e8;
-    --btn-bg: #6fcf9e; --btn-text: #15140f;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 10px 30px rgba(0,0,0,.35);
     --shadow-hover: 0 2px 4px rgba(0,0,0,.32), 0 14px 30px rgba(0,0,0,.36);
   }
@@ -484,7 +479,7 @@
   }
   .cta-box p{ color: var(--text-muted); max-width: 480px; margin: 8px auto 20px; font-size:15px; }
   .btn{
-    display:inline-flex; align-items:center; gap:8px; background: var(--btn-bg); color: var(--btn-text);
+    display:inline-flex; align-items:center; gap:8px; background: var(--accent); color: var(--bg);
     border:none; padding: 12px 22px; border-radius: 100px; font-weight:600; font-size:14.5px;
     cursor:pointer; font-family: var(--sans); text-decoration:none;
   }
@@ -529,7 +524,7 @@
   .hero-text{ min-width:0; }
   .hero-photo{
     flex:0 0 230px; width:230px; aspect-ratio: 4 / 5; border-radius: var(--radius);
-    box-shadow: var(--shadow); border:1px solid var(--border); align-self:center;
+    box-shadow: var(--shadow); border:1px solid var(--border); order:-1; align-self:center;
   }
   @media (min-width: 820px){
     .hero-flex{ flex-direction:row; align-items:flex-start; gap:52px; }
@@ -563,12 +558,6 @@
   .t-kind.experiencia{ color: var(--gestao); }
   .t-kind.tecnologia{ color: var(--tech); }
   .t-kind.neutro{ color: var(--text-faint); }
-
-  .rec-photo-grid{
-    display:grid; grid-template-columns:1fr 1fr; gap:2px; margin:16px -22px -22px;
-    border-radius: 0 0 14px 14px; overflow:hidden;
-  }
-  .rec-photo-grid figure{ margin:0; aspect-ratio: 4/3; }
 
   .mini-photos{ display:grid; grid-template-columns: 1fr 1fr; gap:12px; margin-top:14px; }
   .mini-photos figure{
@@ -1173,9 +1162,9 @@
           <h3>"Ninja Edenred"</h3>
           <p class="meta">Reconhecimento profissional · 2019</p>
           <p>Em 2019, um incidente crítico de segurança deixou a operação inoperante. Junto com a equipe, foi preciso reorganizar rapidamente pessoas, processos e estrutura, cuidando de cada pessoa envolvida enquanto deslocávamos e coordenávamos atividades para uma unidade de apoio, até restabelecer a continuidade do atendimento com o menor impacto possível. Esse trabalho coletivo resultou no reconhecimento "Ninja Edenred".</p>
-          <div class="rec-photo-grid">
-            <figure class="ph"><img src="fotos/reconhecimento-ninja-1.jpg" alt="Registro do reconhecimento Ninja Edenred" loading="lazy" onerror="this.parentElement.remove()"></figure>
-            <figure class="ph"><img src="fotos/reconhecimento-ninja-2.jpg" alt="Registro do reconhecimento Ninja Edenred" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <div class="mini-photos" style="margin-top:16px;">
+            <figure class="ph mp-item"><img src="fotos/reconhecimento-ninja-1.jpg" alt="Registro do reconhecimento Ninja Edenred" loading="lazy" onerror="this.parentElement.remove()"></figure>
+            <figure class="ph mp-item"><img src="fotos/reconhecimento-ninja-2.jpg" alt="Registro do reconhecimento Ninja Edenred" loading="lazy" onerror="this.parentElement.remove()"></figure>
           </div>
         </div>
         <div class="rec-card" style="grid-column:1/-1;">
@@ -1185,9 +1174,9 @@
           <h3>Operação remota durante a pandemia</h3>
           <p class="meta">Ticket Log / Edenred · 2020</p>
           <p>Durante a pandemia, coordenei junto com a equipe, num mutirão coletivo, a transição de toda a operação para o modelo remoto, com atenção ao lado humano daquele momento. Flexibilizamos horários, mantivemos contato próximo com cada pessoa e demos suporte além do trabalho, num período difícil pra todos.</p>
-          <div class="rec-photo-grid">
-            <figure class="ph"><img src="fotos/timeline-pandemia-1.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.parentElement.remove()"></figure>
-            <figure class="ph"><img src="fotos/timeline-pandemia-2.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.parentElement.remove()"></figure>
+          <div class="mini-photos" style="margin-top:16px;">
+            <figure class="ph mp-item"><img src="fotos/timeline-pandemia-1.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.parentElement.remove()"></figure>
+            <figure class="ph mp-item"><img src="fotos/timeline-pandemia-2.jpg" alt="Foto da operação remota durante a pandemia" loading="lazy" onerror="this.parentElement.remove()"></figure>
           </div>
         </div>
         <div class="rec-card" style="grid-column:1/-1;">
@@ -1247,7 +1236,7 @@
         </div>
       </details>
       <div class="cta-box reveal" style="margin-top:28px;background:var(--surface);">
-        <p class="eyebrow" style="margin-bottom:4px;color:var(--btn-bg);">Currículo acadêmico completo</p>
+        <p class="eyebrow" style="margin-bottom:4px;">Currículo acadêmico completo</p>
         <h2 style="font-size:24px;">Formações e publicações</h2>
         <p>Para consultar minha trajetória acadêmica completa, acesse meu currículo na Plataforma Lattes.</p>
         <a class="btn" href="http://lattes.cnpq.br/2440404114743149" target="_blank" rel="noopener">Ver currículo completo no Lattes</a>
