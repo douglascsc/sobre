@@ -54,7 +54,7 @@
     --surface: #ffffff;
     --text: #1c1b19;
     --text-muted: #62615c;
-    --text-faint: #706f68;
+    --text-faint: #6e6d66;
     --border: #e6e3da;
     --tech: #2f5fd6;
     --tech-bg: #eaf0fd;
@@ -175,6 +175,9 @@
     nav.links a.nav-social{ display:flex; padding:10px 0 0; }
     a.nav-social-top{ display:none; }
     .nav-toggle{ display:block; }
+  }
+  @media (max-width: 380px){
+    .brand{ font-size:13px; }
   }
   nav.links a.active{ color: var(--text); }
   nav.links a.active::after{ right:0; }
@@ -590,6 +593,29 @@
     box-shadow: var(--shadow); border:1px solid var(--border);
   }
 
+  /* ---------- Galeria: setas de navegação (desktop) ---------- */
+  .gallery-nav{
+    position:absolute; top:50%; transform:translateY(-50%); z-index:5;
+    width:36px; height:36px; border-radius:50%; padding:0;
+    background: color-mix(in srgb, var(--surface) 90%, transparent);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    border:1px solid var(--border); box-shadow: var(--shadow-hover);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--text); cursor:pointer;
+    opacity:0; visibility:hidden; transition: opacity .15s ease, visibility .15s;
+  }
+  .gallery-wrap:hover .gallery-nav,
+  .gallery-nav:focus-visible{ opacity:1; visibility:visible; }
+  .gallery-nav.prev{ left:8px; }
+  .gallery-nav.next{ right:8px; }
+  .gallery-nav[disabled]{ display:none; }
+  @media (hover:none), (pointer:coarse){
+    .gallery-nav{ display:none; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .gallery-nav{ transition:none; }
+  }
+
   /* ---------- Footer ---------- */
   footer{ border-top:1px solid var(--border); padding: 44px 0; }
   .foot-inner{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:14px; }
@@ -676,7 +702,7 @@
         <p class="hero-close">O que vem a seguir é um pouco dessa trajetória, e também um pouco de quem eu sou além dela.</p>
       </div>
       <figure class="ph hero-photo">
-        <img src="fotos/retrato.jpg" alt="Retrato de Douglas Camargo Carvalho" loading="lazy" onerror="this.closest('.hero-photo').remove()">
+        <img src="fotos/retrato.jpg" alt="Retrato de Douglas Camargo Carvalho" fetchpriority="high" onerror="this.closest('.hero-photo').remove()">
       </figure>
     </div>
   </section>
@@ -1260,6 +1286,12 @@
         <p>Sou corredor, já completei uma maratona (42km) e mais de 20 meias maratonas (21km). Sou marido, pai de dois filhos e gosto de estar sempre aprendendo coisas novas.</p>
       </div>
       <div class="gallery-wrap">
+        <button class="gallery-nav prev" type="button" aria-label="Ver fotos anteriores">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="gallery-nav next" type="button" aria-label="Ver mais fotos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
         <div class="gallery ph-group reveal">
           <figure class="ph gitem"><img src="fotos/pessoal-1.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
           <figure class="ph gitem"><img src="fotos/pessoal-2.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
@@ -1286,6 +1318,12 @@
         <h2>Indústria, serviços, tecnologia e sala de aula</h2>
       </div>
       <div class="gallery-wrap" style="--fade-bg:var(--bg-alt);">
+        <button class="gallery-nav prev" type="button" aria-label="Ver fotos anteriores">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+        </button>
+        <button class="gallery-nav next" type="button" aria-label="Ver mais fotos">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+        </button>
         <div class="gallery ph-group reveal">
           <figure class="ph gitem"><img src="fotos/bastidores-1.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
           <figure class="ph gitem"><img src="fotos/bastidores-2.jpg" alt="" loading="lazy" onerror="this.closest('.gitem').remove()"></figure>
@@ -1424,6 +1462,32 @@
         (group.closest('.ph-group-section') || group).style.display = 'none';
       }
     });
+  });
+
+  // setas de navegação das galerias horizontais
+  document.querySelectorAll('.gallery-wrap').forEach(wrap => {
+    const track = wrap.querySelector('.gallery');
+    const prev = wrap.querySelector('.gallery-nav.prev');
+    const next = wrap.querySelector('.gallery-nav.next');
+    if (!track || !prev || !next) return;
+    // o scroll-snap pode assentar com um leve deslocamento ao carregar;
+    // usamos essa posição de repouso como referência de "início" da galeria
+    let startOffset = track.scrollLeft;
+    const update = () => {
+      const max = track.scrollWidth - track.clientWidth - 2;
+      prev.disabled = track.scrollLeft <= startOffset + 4;
+      next.disabled = max <= 0 || track.scrollLeft >= max;
+    };
+    const step = () => Math.round(track.clientWidth * 0.8);
+    prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+    track.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      startOffset = track.scrollLeft;
+      update();
+    }));
+    update();
   });
 
   // amplia a foto ao clicar
