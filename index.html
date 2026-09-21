@@ -220,9 +220,9 @@
   }
 
   /* ---------- Hero ---------- */
-  .hero{ padding: 84px 0 88px; }
+  .hero{ padding: 84px 0 36px; }
   @media (max-width: 819px){
-    .hero{ padding-top: 36px; padding-bottom: 56px; }
+    .hero{ padding-top: 36px; padding-bottom: 24px; }
   }
   .hero .eyebrow{ color: var(--text-faint); }
   .hero .lede{ font-size: 18px; color: var(--text-muted); max-width: 640px; margin-bottom: 10px; }
@@ -407,9 +407,9 @@
   /* ---------- Bridges (microtextos de transicao entre secoes) ---------- */
   .bridge{
     font-family: var(--serif); font-style: italic; font-size: 17px; line-height:1.6;
-    color: var(--text-muted); max-width: 620px; margin: 0 auto; padding: 36px 24px 0;
+    color: var(--text-muted); max-width: 620px; margin: 0 auto; padding: 36px 24px;
   }
-  @media (max-width:640px){ .bridge{ font-size:15.5px; padding-top:24px; } }
+  @media (max-width:640px){ .bridge{ font-size:15.5px; padding: 24px; } }
   .bridge-lead{
     font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--text-muted);
     margin: 0 0 18px;
@@ -790,11 +790,13 @@
                 <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Ensino Médio - Tive meu primeiro contato estruturado com programação.</p>
               </div>
               <div class="exp-node">
-                <figure class="ph thumb"><img src="fotos/timeline-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.thumb').remove()"></figure>
                 <span class="exp-period">2006</span>
                 <span class="t-kind tecnologia">Projeto</span>
                 <h4 class="exp-company">MOSTRATEC - Expositor</h4>
                 <p style="margin:10px 0 0;color:var(--text-muted);font-size:14.5px;">Projeto "Semáforo Inteligente".</p>
+                <div class="mini-photos" style="grid-template-columns:1fr;margin-top:14px;">
+                  <figure class="ph mp-item"><img src="fotos/timeline-2006.jpg" alt="Foto de 2006, início da trajetória" loading="lazy" onerror="this.closest('.mp-item').remove()"></figure>
+                </div>
               </div>
               <div class="exp-node">
                 <span class="exp-period">2006</span>
