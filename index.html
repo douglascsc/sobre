@@ -1603,14 +1603,14 @@
       var rect = btn.getBoundingClientRect();
       if (!rect.width || !rect.height) return false;
 
-      var targetSize = 30;
+      var targetSize = 38;
       var scale = targetSize / Math.max(rect.width, rect.height);
 
       btn.style.position = 'fixed';
       btn.style.top = 'auto';
       btn.style.left = 'auto';
       btn.style.right = '12px';
-      btn.style.bottom = '90px';
+      btn.style.bottom = '116px';
       btn.style.transformOrigin = '100% 100%';
       btn.style.transform = 'scale(' + scale + ')';
       return true;
