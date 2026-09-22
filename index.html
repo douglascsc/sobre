@@ -1583,43 +1583,23 @@
   }
 </script>
 
-<div vw class="enabled">
-  <div vw-access-button class="active"></div>
-  <div vw-plugin-wrapper>
-    <div class="vw-plugin-top-wrapper"></div>
-  </div>
-</div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 <script>
-  if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
-<script>
-  (function () {
-    if (window.innerWidth > 640) return;
+  if (window.innerWidth > 640) {
+    var vlibrasWrap = document.createElement('div');
+    vlibrasWrap.setAttribute('vw', '');
+    vlibrasWrap.className = 'enabled';
+    vlibrasWrap.innerHTML =
+      '<div vw-access-button class="active"></div>' +
+      '<div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>';
+    document.body.appendChild(vlibrasWrap);
 
-    function shrinkVLibrasBtn() {
-      var btn = window.VLibrasWidget && window.VLibrasWidget.initBtn;
-      if (!btn) return false;
-      var rect = btn.getBoundingClientRect();
-      if (!rect.width || !rect.height) return false;
-
-      btn.style.position = 'fixed';
-      btn.style.top = 'auto';
-      btn.style.left = 'auto';
-      btn.style.right = '12px';
-      btn.style.bottom = '116px';
-      btn.style.width = '38px';
-      btn.style.height = '38px';
-      return true;
-    }
-
-    var attempts = 0;
-    (function waitForVLibrasBtn() {
-      if (shrinkVLibrasBtn() || attempts >= 40) return;
-      attempts++;
-      setTimeout(waitForVLibrasBtn, 250);
-    })();
-  })();
+    var vlibrasScript = document.createElement('script');
+    vlibrasScript.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+    vlibrasScript.onload = function () {
+      if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
+    };
+    document.body.appendChild(vlibrasScript);
+  }
 </script>
 </body>
 </html>
