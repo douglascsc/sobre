@@ -1594,12 +1594,12 @@
   if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
 </script>
 <style>
-  div[vw] div[vw-access-button]{
+  [vw-access-button]{
     width: 44px !important;
     height: 44px !important;
   }
   @media (max-width: 640px){
-    div[vw] div[vw-access-button]{
+    [vw-access-button]{
       top: auto !important;
       bottom: 110px !important;
       right: 12px !important;
@@ -1609,5 +1609,20 @@
     }
   }
 </style>
+<script>
+  (function () {
+    if (window.innerWidth > 640) return;
+    setInterval(function () {
+      var btn = document.querySelector('[vw-access-button]');
+      if (!btn) return;
+      btn.style.setProperty('width', '30px', 'important');
+      btn.style.setProperty('height', '30px', 'important');
+      btn.style.setProperty('top', 'auto', 'important');
+      btn.style.setProperty('bottom', '110px', 'important');
+      btn.style.setProperty('right', '12px', 'important');
+      btn.style.setProperty('left', 'auto', 'important');
+    }, 400);
+  })();
+</script>
 </body>
 </html>
