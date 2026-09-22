@@ -1584,22 +1584,26 @@
 </script>
 
 <script>
-  if (window.innerWidth > 640) {
-    var vlibrasWrap = document.createElement('div');
-    vlibrasWrap.setAttribute('vw', '');
-    vlibrasWrap.className = 'enabled';
-    vlibrasWrap.innerHTML =
-      '<div vw-access-button class="active"></div>' +
-      '<div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>';
-    document.body.appendChild(vlibrasWrap);
+  var vlibrasWrap = document.createElement('div');
+  vlibrasWrap.setAttribute('vw', '');
+  vlibrasWrap.className = 'enabled';
+  vlibrasWrap.innerHTML =
+    '<div vw-access-button class="active"></div>' +
+    '<div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>';
+  document.body.appendChild(vlibrasWrap);
 
-    var vlibrasScript = document.createElement('script');
-    vlibrasScript.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
-    vlibrasScript.onload = function () {
-      if (window.VLibras) new window.VLibras.Widget('https://vlibras.gov.br/app');
-    };
-    document.body.appendChild(vlibrasScript);
-  }
+  var vlibrasScript = document.createElement('script');
+  vlibrasScript.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+  vlibrasScript.onload = function () {
+    if (!window.VLibras) return;
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+
+    if (window.innerWidth <= 640 && window.VLibrasWidget && window.VLibrasWidget.access) {
+      window.VLibrasWidget.access.style.top = 'auto';
+      window.VLibrasWidget.access.style.bottom = '110px';
+    }
+  };
+  document.body.appendChild(vlibrasScript);
 </script>
 </body>
 </html>
