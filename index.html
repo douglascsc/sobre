@@ -1479,28 +1479,32 @@
     localStorage.setItem('theme', next);
   });
 
-  // aumentar tamanho do texto (3 níveis: normal, aumentado, mais aumentado)
+  // aumentar tamanho do texto (3 níveis no desktop, 2 no mobile)
   const textSizeToggle = document.getElementById('textSizeToggle');
-  const TEXT_SIZE_STEPS = 3;
-  const TEXT_SIZE_LABELS = [
-    'Aumentar tamanho do texto',
-    'Tamanho do texto aumentado. Clique para aumentar mais',
-    'Tamanho do texto no máximo. Clique para restaurar o tamanho normal',
-  ];
+  function maxTextSizeStep(){ return window.innerWidth <= 640 ? 1 : 2; }
+  function textSizeLabel(step, maxStep){
+    if (step === 0) return 'Aumentar tamanho do texto';
+    if (step === maxStep) return 'Tamanho do texto no máximo. Clique para restaurar o tamanho normal';
+    return 'Tamanho do texto aumentado. Clique para aumentar mais';
+  }
   let textSizeStep = parseInt(localStorage.getItem('textSizeStep'), 10);
   if (isNaN(textSizeStep)) textSizeStep = localStorage.getItem('largeText') === '1' ? 1 : 0;
   function applyTextSize(step){
+    const maxStep = maxTextSizeStep();
+    step = Math.min(step, maxStep);
     document.body.classList.remove('text-size-1', 'text-size-2');
     if (step > 0) document.body.classList.add('text-size-' + step);
     textSizeToggle.setAttribute('aria-pressed', String(step > 0));
-    textSizeToggle.setAttribute('aria-label', TEXT_SIZE_LABELS[step]);
+    textSizeToggle.setAttribute('aria-label', textSizeLabel(step, maxStep));
+    return step;
   }
-  applyTextSize(textSizeStep);
+  textSizeStep = applyTextSize(textSizeStep);
   textSizeToggle.addEventListener('click', () => {
-    textSizeStep = (textSizeStep + 1) % TEXT_SIZE_STEPS;
+    textSizeStep = (textSizeStep + 1) % (maxTextSizeStep() + 1);
     localStorage.setItem('textSizeStep', String(textSizeStep));
     applyTextSize(textSizeStep);
   });
+  window.addEventListener('resize', () => { textSizeStep = applyTextSize(textSizeStep); });
 
   // botões flutuantes: voltar ao topo e compartilhar
   const fabGroup = document.getElementById('fabGroup');
