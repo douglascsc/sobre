@@ -111,6 +111,14 @@
   a:focus-visible, button:focus-visible, summary:focus-visible{
     outline: 2px solid var(--tech); outline-offset: 3px; border-radius: 2px;
   }
+  .link-accent{
+    font-weight:600; text-decoration:underline; text-decoration-color:transparent;
+    text-underline-offset:3px; transition: text-decoration-color .2s ease;
+  }
+  .link-accent:hover, .link-accent:focus-visible{ text-decoration-color: currentColor; }
+  .link-accent[target="_blank"]::after{
+    content:"↗"; display:inline-block; margin-left:3px; font-size:.85em; transform:translateY(-1px);
+  }
   .container{ max-width: 880px; margin:0 auto; padding: 0 24px; }
   section{ padding: 88px 0; }
   @media (max-width: 640px){ section{ padding: 56px 0; } }
@@ -1039,7 +1047,7 @@
               <p style="margin:0;color:var(--text-muted);font-size:14.5px;">Atuação voluntária voltada à formação e desenvolvimento de jovens.</p>
             </div>
             <div class="t-block" style="margin-top:8px;">
-              <span class="t-kind neutro">Momentos marcantes (<a href="#reconhecimentos" style="color:var(--gestao);">ver detalhes</a>)</span>
+              <span class="t-kind neutro">Momentos marcantes (<a href="#reconhecimentos" class="link-accent" style="color:var(--gestao);">ver detalhes</a>)</span>
               <h4>2019 - Reconhecimento "Ninja Edenred"</h4>
               <p style="margin:0;color:var(--text-muted);font-size:14.5px;">Pela atuação coletiva na gestão de um incidente crítico de segurança.</p>
               <h4 style="margin-top:12px;">2020 - Pandemia / Operação remota</h4>
@@ -1077,9 +1085,9 @@
                   <span class="t-kind tecnologia">Tecnologias aplicadas</span>
                   <h4>Podcast, revista digital e ferramentas de gestão</h4>
                   <ul class="t-list">
-                    <li>Criei o podcast <a href="https://open.spotify.com/show/0bMkZXueVETtsvbHRsIuaz?si=dc50051740fc4d91" target="_blank" rel="noopener" style="color:var(--tech);font-weight:600;">"Pílulas da Qualidade"</a>.</li>
-                    <li>Participei da equipe editorial da <a href="https://heyzine.com/shelf/ca568623e2.html" target="_blank" rel="noopener" style="color:var(--tech);font-weight:600;">Revista Digital Qualidade em Pauta</a> e também contribuí com vários artigos.</li>
-                    <li>Desenvolvi ferramentas para apoiar a gestão das turmas — controle de turmas e prazos, um checklist de acompanhamento e o <a href="https://educapes.capes.gov.br/handle/capes/744505" target="_blank" rel="noopener" style="color:var(--tech);font-weight:600;">Guia do Estudante do Técnico em Qualidade EaD</a>, criado para reduzir a evasão dos alunos.</li>
+                    <li>Criei o podcast <a href="https://open.spotify.com/show/0bMkZXueVETtsvbHRsIuaz?si=dc50051740fc4d91" target="_blank" rel="noopener" class="link-accent" style="color:var(--tech);">"Pílulas da Qualidade"</a>.</li>
+                    <li>Participei da equipe editorial da <a href="https://heyzine.com/shelf/ca568623e2.html" target="_blank" rel="noopener" class="link-accent" style="color:var(--tech);">Revista Digital Qualidade em Pauta</a> e também contribuí com vários artigos.</li>
+                    <li>Desenvolvi ferramentas para apoiar a gestão das turmas — controle de turmas e prazos, um checklist de acompanhamento e o <a href="https://educapes.capes.gov.br/handle/capes/744505" target="_blank" rel="noopener" class="link-accent" style="color:var(--tech);">Guia do Estudante do Técnico em Qualidade EaD</a>, criado para reduzir a evasão dos alunos.</li>
                     <li>Ministrei mais de 6 palestras e treinamentos internos sobre Excel, Word, PowerPoint e Gestão da Qualidade (2018–2021).</li>
                   </ul>
                   <div class="mini-photos">
@@ -1312,7 +1320,7 @@
         <div class="pub-list">
           <div class="pub-card">
             <p class="pub-kind">Capítulo de livro publicado · 2024</p>
-            <p class="pub-text">CARVALHO, D. C. Estudantes como centro do processo educativo: Intervenção pedagógica em um Curso Técnico em Qualidade através da Aprendizagem Baseada em Problemas (ABP). In: JOSUÉ (Org.). <em>Educação Profissional e Tecnológica: dos conhecimentos às práticas pedagógicas</em>. 1. ed., 2024, p. 296-312. Disponível em: <a href="https://www.ifsul.edu.br/images/PROEN/Publica%C3%A7%C3%B5es/Publica%C3%A7%C3%B5es%20PROEN/E-Book_Educa%C3%A7%C3%A3o%20Profissional%20e%20Tecnol%C3%B3gica_.pdf?_t=1724865844" target="_blank" rel="noopener" style="color:var(--tech);font-weight:600;">e-book</a>.</p>
+            <p class="pub-text">CARVALHO, D. C. Estudantes como centro do processo educativo: Intervenção pedagógica em um Curso Técnico em Qualidade através da Aprendizagem Baseada em Problemas (ABP). In: JOSUÉ (Org.). <em>Educação Profissional e Tecnológica: dos conhecimentos às práticas pedagógicas</em>. 1. ed., 2024, p. 296-312. Disponível em: <a href="https://www.ifsul.edu.br/images/PROEN/Publica%C3%A7%C3%B5es/Publica%C3%A7%C3%B5es%20PROEN/E-Book_Educa%C3%A7%C3%A3o%20Profissional%20e%20Tecnol%C3%B3gica_.pdf?_t=1724865844" target="_blank" rel="noopener" class="link-accent" style="color:var(--tech);">e-book</a>.</p>
           </div>
           <div class="pub-card">
             <p class="pub-kind">Resumo em anais de congresso · 2024</p>
@@ -1320,11 +1328,11 @@
           </div>
           <div class="pub-card">
             <p class="pub-kind">Dissertação de mestrado · 2024</p>
-            <p class="pub-text">CARVALHO, D. C.; CALIXTO, P. M. <a href="https://sucupira-legado.capes.gov.br/sucupira/public/consultas/coleta/trabalhoConclusao/viewTrabalhoConclusao.xhtml?popup=true&amp;id_trabalho=15049552" target="_blank" rel="noopener" style="color:var(--tech);font-weight:600;">Evasão escolar em um curso técnico a distância de uma escola do Sistema S: um estudo de caso</a>. Dissertação de mestrado, Instituto Federal Sul-rio-grandense (IFSUL), 2024.</p>
+            <p class="pub-text">CARVALHO, D. C.; CALIXTO, P. M. <a href="https://sucupira-legado.capes.gov.br/sucupira/public/consultas/coleta/trabalhoConclusao/viewTrabalhoConclusao.xhtml?popup=true&amp;id_trabalho=15049552" target="_blank" rel="noopener" class="link-accent" style="color:var(--tech);">Evasão escolar em um curso técnico a distância de uma escola do Sistema S: um estudo de caso</a>. Dissertação de mestrado, Instituto Federal Sul-rio-grandense (IFSUL), 2024.</p>
           </div>
           <div class="pub-card">
             <p class="pub-kind">Produto educacional · 2024</p>
-            <p class="pub-text">CARVALHO, D. C.; CALIXTO, P. M. <a href="https://educapes.capes.gov.br/handle/capes/744505" target="_blank" rel="noopener" style="color:var(--tech);font-weight:600;">Guia do Estudante do Técnico em Qualidade EaD</a>. Material didático, EducaPes/Capes, 2024.</p>
+            <p class="pub-text">CARVALHO, D. C.; CALIXTO, P. M. <a href="https://educapes.capes.gov.br/handle/capes/744505" target="_blank" rel="noopener" class="link-accent" style="color:var(--tech);">Guia do Estudante do Técnico em Qualidade EaD</a>. Material didático, EducaPes/Capes, 2024.</p>
           </div>
         </div>
       </details>
