@@ -549,6 +549,14 @@
     background: rgba(255,255,255,.12); border:none; color:#fff; font-size:20px; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
   }
+  .lightbox-nav{
+    position:absolute; top:50%; transform:translateY(-50%); width:44px; height:44px; border-radius:50%;
+    background: rgba(255,255,255,.12); border:none; color:#fff; cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .lightbox-nav.prev{ left:20px; }
+  .lightbox-nav.next{ right:20px; }
+  .lightbox-nav[hidden]{ display:none; }
 
   .hero-flex{ display:flex; flex-direction:column; gap:30px; }
   .hero-text{ min-width:0; }
@@ -1399,6 +1407,12 @@
 
 <div class="lightbox" id="lightbox">
   <button class="lightbox-close" id="lightboxClose" aria-label="Fechar">✕</button>
+  <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Foto anterior">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Próxima foto">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
   <img id="lightboxImg" src="" alt="">
 </div>
 
@@ -1547,9 +1561,23 @@
   // amplia a foto ao clicar
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
-  function openLightbox(img){
+  const lightboxPrev = document.getElementById('lightboxPrev');
+  const lightboxNext = document.getElementById('lightboxNext');
+  let lightboxGroup = [];
+  let lightboxIndex = 0;
+  function showLightboxAt(index){
+    lightboxIndex = (index + lightboxGroup.length) % lightboxGroup.length;
+    const img = lightboxGroup[lightboxIndex];
     lightboxImg.src = img.currentSrc || img.src;
     lightboxImg.alt = img.alt || '';
+  }
+  function openLightbox(img){
+    const group = img.closest('.gallery.ph-group, .mini-photos');
+    lightboxGroup = group ? Array.from(group.querySelectorAll('.ph img')) : [img];
+    const hasMultiple = lightboxGroup.length > 1;
+    lightboxPrev.hidden = !hasMultiple;
+    lightboxNext.hidden = !hasMultiple;
+    showLightboxAt(lightboxGroup.indexOf(img));
     lightbox.classList.add('open');
   }
   function closeLightbox(){
@@ -1560,9 +1588,16 @@
     const img = e.target.closest('.ph img');
     if (img) openLightbox(img);
   });
-  lightbox.addEventListener('click', (e) => { if (e.target !== lightboxImg) closeLightbox(); });
+  lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
   document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLightbox(); });
+  lightboxPrev.addEventListener('click', () => showLightboxAt(lightboxIndex - 1));
+  lightboxNext.addEventListener('click', () => showLightboxAt(lightboxIndex + 1));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') showLightboxAt(lightboxIndex - 1);
+    if (e.key === 'ArrowRight') showLightboxAt(lightboxIndex + 1);
+  });
 
   // acordeão "O que fiz por lá"
   document.querySelectorAll('.exp-toggle').forEach(btn => {
