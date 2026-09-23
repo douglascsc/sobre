@@ -1570,13 +1570,13 @@
     const img = lightboxGroup[lightboxIndex];
     lightboxImg.src = img.currentSrc || img.src;
     lightboxImg.alt = img.alt || '';
+    const hasMultiple = lightboxGroup.length > 1;
+    lightboxPrev.hidden = !hasMultiple;
+    lightboxNext.hidden = !hasMultiple;
   }
   function openLightbox(img){
     const group = img.closest('.gallery.ph-group, .mini-photos');
     lightboxGroup = group ? Array.from(group.querySelectorAll('.ph img')) : [img];
-    const hasMultiple = lightboxGroup.length > 1;
-    lightboxPrev.hidden = !hasMultiple;
-    lightboxNext.hidden = !hasMultiple;
     showLightboxAt(lightboxGroup.indexOf(img));
     lightbox.classList.add('open');
   }
@@ -1584,6 +1584,13 @@
     lightbox.classList.remove('open');
     lightboxImg.src = '';
   }
+  // pula automaticamente fotos que falham ao carregar (ex: ainda não subidas),
+  // já que o lazy-loading das miniaturas pode não ter detectado a falha antes de abrir o lightbox
+  lightboxImg.addEventListener('error', () => {
+    if (!lightboxImg.src || lightboxGroup.length <= 1) return;
+    lightboxGroup.splice(lightboxIndex, 1);
+    showLightboxAt(lightboxIndex);
+  });
   document.addEventListener('click', (e) => {
     const img = e.target.closest('.ph img');
     if (img) openLightbox(img);
