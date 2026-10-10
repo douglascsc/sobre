@@ -21,6 +21,8 @@ Todas as fotos recebem automaticamente um tratamento em preto e branco (ficam co
 | `reconhecimento-ninja-1.jpg` | Card "Ninja Edenred" (1ª foto) | Foto ou print do reconhecimento |
 | `reconhecimento-ninja-2.jpg` | Card "Ninja Edenred" (2ª foto) | Segunda foto ou print do reconhecimento |
 | `robosapiens-painel.jpg` | Card "RoboSapiens 2026", em Momentos marcantes | Print do painel do sistema de apuração |
+| `robosapiens-arena.jpg` | Card "RoboSapiens 2026", em Momentos marcantes | Foto da arena da modalidade Estoura Balão |
+| `robosapiens-video.mp4` | Card "RoboSapiens 2026", em Momentos marcantes | Vídeo curto, toca mudo em loop |
 | `senac-podcast.jpg` | Card do SENAC, bloco "Podcast, revista digital e ferramentas de gestão" | Foto do podcast "Pílulas da Qualidade", formato ~4:3 |
 | `senac-revista.jpg` | Card do SENAC, bloco "Podcast, revista digital e ferramentas de gestão" | Foto da Revista Digital Qualidade em Pauta, formato ~4:3 |
 | `senai-1.jpg` | Card do SENAI | Foto do período como instrutor, formato ~4:3 |
