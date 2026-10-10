@@ -28,6 +28,6 @@ Todas as fotos recebem automaticamente um tratamento em preto e branco (ficam co
 | `senai-1.jpg` | Card do SENAI | Foto do período como instrutor, formato ~4:3 |
 | `senai-2.jpg` | Card do SENAI (2ª foto) | Foto do período como instrutor, formato ~4:3 |
 | `pessoal-1.jpg` a `pessoal-9.jpg`, `pessoal-11.jpg`, `pessoal-12.jpg` | Seção "E a vida pessoal?", antes de Bastidores | 11 fotos livres, formato quadrado (1:1) |
-| `bastidores-1.jpg` a `bastidores-12.jpg` | Tira "Bastidores", no fim da página | 12 fotos livres, formato quadrado (1:1) |
+| `bastidores-1.jpg` a `bastidores-13.jpg` | Tira "Por onde andei", no fim da página | 13 fotos livres, formato quadrado (1:1) |
 
 Formatos aceitos: `.jpg`, `.jpeg`, `.png`, `.webp` — se usar uma extensão diferente de `.jpg`, ajuste o atributo `src` correspondente em `index.html`.
